@@ -10,6 +10,8 @@ class User < ApplicationRecord
     ThanksMailer.thanks_mail(self).deliver
   end
 
+  has_many :user_rooms, dependent: :destroy
+  has_many :chats, dependent: :destroy
   has_many :books, dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :book_comments, dependent: :destroy
