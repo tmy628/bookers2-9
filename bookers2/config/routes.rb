@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'chats/show'
   get 'search/search'
   devise_for :users, controllers: {
     sessions: 'users/sessions',
